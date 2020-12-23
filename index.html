@@ -2,53 +2,9 @@
 <html>
 	<head></hed>
 	<body>
-<p style="padding-bottom: 10px;">Dear {{salutation}} {{first_name}} {{last_name}},</p>
-<p><strong>Thank you for booking a consultation with us for {{pet_name}}.</strong></p>
-<p>The appointment details are as follows:</p>
-<p>
-	<strong>Date:</strong> {{appointment_date}} <br>
-	<strong>Time:</strong> {{appointment_time}} <br>
-	<strong>With:</strong> {{clinician}}
-</p>
-
-{% if (is_payable) %}
-	<br/>
-	<p style="line-height: 150%; font-size: 20px; color: #212121;"><strong>The appointment fee will be {{currency}} {{amount}}.</strong></p>
-	{% if (is_ready_for_charge) %}
-		<p><a style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; font-size: 15px; text-decoration: none !important; color: #ffffff; border-style: solid; border-color: #337ab7; border-width:10px 20px 10px 20px; display: inline-block; background: #337ab7; border-radius: 3px; font-style: normal; line-height: 120%; width: auto; text-align: center;" href="{{payment_link}}" target="_blank" rel="noopener">Pre-authorize Payment</a>
-		</p>
+<p>Specify if the tax should be calculated via Avalara</p>
+<p>Enable Avalara Integration</p>
 		<p>Content template appended to the editor.</p>
-	{% else %}
-		<p>You will be sent an email 5 days prior to your consultation to pre-authorize this payment.</p>
-	{% endif %}
-	<br/>
-{% endif %}
-
-{% if (is_telemedicine_enabled) %}
-	<br />
-	<p><strong>Specify if the tax should be calculated via Avalara.</strong></p>
-	<p>Enable Avalara Integration</p>
-	<p><a href="{{telemedicine_link}}" target="_blank" style="-webkit-text-size-adjust:none; -ms-text-size-adjust:none; border-style:solid; border-color:#333333; border-width:10px 20px 10px 20px; display:inline-block; background:#333333; border-radius:3px; line-height:120%; color:#ffffff; width:auto; text-align:center; text-decoration:none !important; font-size: 14px;">Access video consultation</a></p>
-	<p>To edit or cancel your appointment, or to see full details please follow this link <a href="{{edit_booking_link}}" target="_blank" rel="noopener">Reschedule / Cancel</a>.</p>
-	<br/>
-{% else %}
-	<br/>
-	<p>To edit or cancel your appointment, or to see full details please click the link below:</p>
-	<p><a href="{{edit_booking_link}}" target="_blank" style="-webkit-text-size-adjust:none; -ms-text-size-adjust:none; border-style:solid; border-color:#333333; border-width:10px 20px 10px 20px; display:inline-block; background:#333333; border-radius:3px; line-height:120%; color:#ffffff; width:auto; text-align:center; text-decoration:none !important; font-size: 15px;">Reschedule / Cancel</a></p>
-	<br/>
-{% endif %}
-
-<p>{{appointment_type_message}}</p>
-<p>{{filter_message}}</p>
-{% if (is_refund_policy_applicable) %}
-	<p><strong>Refund Policy:</strong><br>{{refund_policy}}</p>
-{% else %}
-	<p><strong>Enable Avalara Integration</strong><br>{{amendment_policy}}</p>	
-{% endif %}
-<p>Should you have any problems or need to contact us, please email or call us on {{telephone}} during working hours.</p>
-<p>We are looking forward to seeing you and {{pet_name}} soon.</p>
-<p style="padding-top: 10px;">Kind regards<br><span style="font-size: 15px;"><strong>{{clinic_name}}</strong></span></p>
-		<script>
     window.LOKALISE_CONFIG = {
       projectId: "271393925fe232c5edb166.73766189",
       locale: "en"
