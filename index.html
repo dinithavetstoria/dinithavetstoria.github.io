@@ -17,7 +17,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!--<div id="vetstoria-fw-btn-container" data-mode="html5" data-domain="quattroporte.milkyway.vetstoria.space" data-site-hash="6054843446a21"></div>
 <script src="https://quattroporte.milkyway.vetstoria.space/js/oabp-floating-button.min.js"></script>-->
 </head>
+
+<button onclick="runDataPush()">Click me</button>
+<script>
+    function runDataPush() {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ "Dinitha": 1 });
+        console.log("Data Layer psu");
+    }
+</script>
 <body>
+
  <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHWZDWH6"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
